@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+sudo cpufreq-set -g performance

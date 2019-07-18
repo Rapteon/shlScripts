@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+sudo dmidecode | grep -A3 '^System Information'
+
