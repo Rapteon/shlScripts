@@ -1,0 +1,14 @@
+#AUTHOR: rapteon; DATE: 2019-07-19
+
+#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+
+#Dependencies: 'smartontools' package
+
+
+#!/usr/bin/env bash
+
+#If this code doesn't work as expected, try typing 'lsblk' in the terminal...
+#	...then find the device which is your hard drive...
+#	...and replace 'sda' with <your_drive>
+
+sudo smartctl -a /dev/sda | grep "Errors" | cut -b 22-

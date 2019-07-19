@@ -1,3 +1,10 @@
+#AUTHOR: rapteon; DATE: 2019-07-19
+
+#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+
+#Dependencies: 'dmidecode' package
+
+
 #! /usr/bin/env bash
 
 sudo dmidecode | grep -A3 '^System Information'
