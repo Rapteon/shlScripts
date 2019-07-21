@@ -1,0 +1,12 @@
+#AUTHOR: rapteon; DATE: 2019-07-21
+
+#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+
+#Dependencies: 'cpufrequtils' package
+
+
+#!/usr/bin/env bash
+
+
+cpufreq-info | grep "CPU frequency" -m1
+

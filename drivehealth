@@ -11,4 +11,4 @@
 #	...then find the device which is your hard drive...
 #	...and replace 'sda' with <your_drive>
 
-sudo smartctl -a /dev/sda | grep "Errors" | cut -b 22-
+sudo smartctl -a /dev/sda | grep "Errors"
