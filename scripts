@@ -1,0 +1,18 @@
+#AUTHOR: rapteon; DATE: 2019-07-26
+
+#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+#Additionally, permit this file to be executable.
+#And then run it by typing ./scripts in the directory in which it is placed.
+
+#Dependencies: None.
+
+
+# Replace tha value of `dir` with the path where your scripts are placed.
+dir=~/Software/shlScripts
+
+
+for place in $dir
+do
+	cd $place;
+	grep "#!" *;
+done
