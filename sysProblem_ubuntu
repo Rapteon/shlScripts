@@ -1,0 +1,12 @@
+#AUTHOR: rapteon; DATE: 2019-07-19
+
+#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+
+#Dependencies: Not any you need to install.
+
+#Working: This script is used to remove error logs from /var/crash. These logs create the annoying notification on Ubuntu "System program problem detected."
+#	However, I recommend reading the errors in this directory before running this script.
+#! /usr/bin/env bash
+
+
+sudo rm /var/crash/*
