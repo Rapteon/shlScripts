@@ -1,9 +1,0 @@
-#AUTHOR: rapteon; DATE: 2019-07-26
-
-#Place this script inside a directory which is included in your PATH or add the$
-
-#Dependencies: None.
-
-#!/usr/bin/env bash
-
-echo "Number of Running Processes: ${ps | wc -l}"
