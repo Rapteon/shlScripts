@@ -6,6 +6,7 @@
 
 #Dependencies: None.
 
+#This script works by finding the files where the '#' (shebang) is present.
 
 # Replace tha value of `dir` with the path where your scripts are placed.
 dir=~/Software/shlScripts
