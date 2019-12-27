@@ -1,0 +1,9 @@
+#AUTHOR: rapteon; DATE: 2019-12-27
+
+#Place this script inside the directory which is included in your PATH variable or add the script to a directory which is present in your PATH.
+
+#Dependencies: 'cpupower' ackage and its dependencies.
+
+#! /usr/bin/bash
+
+sudo cpupower frequency-set -g powersave
