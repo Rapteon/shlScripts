@@ -1,0 +1,12 @@
+#AUTHOR: rapteon; DATE: 2019-12-29
+
+#Place this script inside the directory which is included in your PATH variable or copy the script to a directory which is present in your PATH.
+
+#Action: This script sets the CPU governor to 'performance'.
+
+#Dependencies: 'cpupower' package and its dependencies.
+
+#! /usr/bin/bash
+
+#This scripts sets the governor to performance. Works only if the performance governor is available.
+sudo cpupower frequency-set -g performance
