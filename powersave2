@@ -2,7 +2,9 @@
 
 #Place this script inside the directory which is included in your PATH variable or add the script to a directory which is present in your PATH.
 
-#Dependencies: 'cpupower' ackage and its dependencies.
+#Action: Sets the cpu governor to 'powersave'.
+
+#Dependencies: 'cpupower' package and its dependencies.
 
 #! /usr/bin/bash
 
