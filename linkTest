@@ -1,0 +1,44 @@
+#AUTHOR: rapteon; DATE: 2020-07-17
+
+#Place this script inside a directory which is included in your PATH or add this directory to your PATH.
+
+#Dependencies: 'wget' package and its dependencies.
+
+#Bash script to check if a webpage has broken links in it. The URL must be of the form: http[s]://...
+
+#!/usr/bin/env bash
+
+urlPresent=1		# Variable to check if a link has been given.
+case $1 in 
+	"--no-interact" | "-n" )
+		if [ $# -lt 2 ]
+		then
+			echo "Missing URL. Try 'linkTest --help' for help."
+		else
+			urlPresent=0
+		fi
+	;;
+	"--interact" | "-i" )
+		read -p "URL: " url
+		if [ -z $url ]
+		then
+			echo "Missing URL. Please enter the URL when asked."
+		elif [[ $url =~ (http?://*|https://*) ]]		# Matches URLs starting with "http://" or "https://"
+		then
+			urlPresent=0 
+		fi
+	;;
+	"--help" | "-h" )
+		echo "Three"
+	;;
+	"")
+		echo "Please pass at least one flag."
+		exit
+esac
+
+if [[ $urlPresent -eq 0 ]]
+then
+	wget --spider -nd -r https://www.google.com |& grep -e 'failed\|broken'		# Matches patterns "failed" or "broken", uses the wget spider mode.
+else
+	echo "Not a valid link."
+fi
