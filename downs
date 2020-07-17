@@ -1,3 +1,9 @@
+#AUTHOR: rapteon; DATE: 2019-07-25
+
+#Place this script inside a directory which is included in your PATH or add this directory to your PATH.
+
+#Dependencies: 'nautilus' package (file manager)
+
 #!/usr/bin/env bash
 
 nautilus -ns ~/Downloads

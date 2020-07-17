@@ -1,6 +1,6 @@
 #AUTHOR: rapteon; DATE: 2019-07-19
 
-#Place this script inside a directory which is included in your PATH or add the directory where to your PATH.
+#Place this script inside a directory which is included in your PATH or add the directory to your PATH.
 
 #Dependencies: 'dmidecode' package
 

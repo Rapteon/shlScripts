@@ -1,6 +1,6 @@
 #AUTHOR: rapteon; DATE: 2019-12-29
 
-#Place this script inside the directory which is included in your PATH variable or copy the script to a directory which is present in your PATH.
+#Place this script inside the directory which is included in your PATH variable or add this directory to your PATH.
 
 #Action: This script sets the CPU governor to 'performance'.
 
