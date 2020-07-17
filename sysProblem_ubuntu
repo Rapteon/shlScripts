@@ -4,8 +4,9 @@
 
 #Dependencies: Not any you need to install.
 
-#Working: This script is used to remove error logs from /var/crash. These logs create the annoying notification on Ubuntu "System program problem detected."
-#	However, I recommend reading the errors in this directory before running this script.
+#This script is used to remove error logs from /var/crash. These logs create the annoying notification on Ubuntu "System program problem detected."
+#However, I recommend reading the errors in this directory before running this script.
+
 #! /usr/bin/env bash
 
 

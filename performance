@@ -4,7 +4,6 @@
 
 #Dependencies: 'cpufrequtils' package and its dependencies.
 
-
 #! /usr/bin/env bash
 
 sudo cpufreq-set -g performance

@@ -4,7 +4,6 @@
 
 #Dependencies: 'cpufrequtils' package
 
-
 #!/usr/bin/env bash
 
 

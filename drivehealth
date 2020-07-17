@@ -4,7 +4,6 @@
 
 #Dependencies: 'smartontools' package
 
-
 #!/usr/bin/env bash
 
 #If this code doesn't work as expected, try typing 'lsblk' in the terminal...
