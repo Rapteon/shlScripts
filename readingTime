@@ -1,0 +1,38 @@
+#AUTHOR: rapteon; DATE: 20200717
+
+#Place this script inside a directory which is included in your PATH or add this directory to your PATH.
+
+#Dependencies: 'sed', 'bc' packages and their dependencies.
+
+#!/usr/bin/env bash
+
+read -p "Filename: " filename
+
+readingSpeed=250
+
+if [ -f $filename ]
+then
+	#Obtaining the word count from 'wc', using 'cut' to obtain the first field of the output.
+	wordCount=$(wc -w $filename | cut -d " " -f 1)
+	
+	#Printing text without moving to next line at the end."
+	echo -n "ReadingTime: ~"
+
+	#In the next line, 'fractionalTime' is assigned a value from the execution of an echo command.
+	#The executed 'echo' command also executes an 'echo' within itself. The inner 'echo' provides...
+	#...input to 'bc' which produces decimal numbers of the form '.xy' when the number is less than 0.
+	#This must be prevented since we cannot find the number of minutes in cases wherein the text is so...
+	#...short that the reading time can be measured only in seconds. Hence we use 'sed' to substitute...
+	#...the '.xy' with '0.xy' whenever required.
+	fractionalTime=$(echo "$(echo "scale=2; $wordCount / $readingSpeed" | bc)" | sed 's/^\./0./')
+	
+	#From the above calculation, we obtain the digits before the decimal point using 'cut' with '.' as a delimiter.
+	minutes=$(echo "$fractionalTime" | cut -f 1 -d '.')
+
+	#From the value of 'fractionalTime', we obtain the digits after the decimal point using 'cut' with '.' as a delimiter.
+	seconds=$(echo "$(echo "$fractionalTime" | cut -f 2 -d '.') * 0.6" | bc)
+
+	#Finally, printing the reading time.
+	echo -n "$minutes minutes $seconds seconds"
+fi
+
