@@ -4,11 +4,18 @@
 
 #Dependencies: 'sed', 'bc' packages and their dependencies.
 
+#Note: The script only works with plain-text files. Files in .doc, .odf, .pdf are not supported currently.
+
 #!/usr/bin/env bash
 
-read -p "Filename: " filename
-
 readingSpeed=250
+
+if [[ $# -eq 1 ]]
+then
+	filename=$1
+else
+	read -p "Filename: " filename
+fi
 
 if [ -f $filename ]
 then
