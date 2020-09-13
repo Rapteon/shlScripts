@@ -43,3 +43,4 @@ then
 	echo -n "$minutes minutes $seconds seconds"
 fi
 
+echo ""
